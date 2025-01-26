@@ -69,3 +69,4 @@ C:\Users\jonat\balta\GBE\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\System.
 C:\Users\jonat\balta\GBE\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
 C:\Users\jonat\balta\GBE\obj\Debug\net5.0\GBE.csproj.AssemblyReference.cache
 C:\Users\jonat\balta\GBE\obj\Debug\net5.0\GBE.csproj.Up2Date
+C:\Users\jonat\balta\GBE\obj\Debug\net5.0\GBE.sourcelink.json

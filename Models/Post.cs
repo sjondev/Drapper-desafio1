@@ -13,11 +13,19 @@ namespace GBE.Models {
         public string Summary { get; set; }
         public string Body { get; set; }
         public string Slug { get; set; }
+
+        [Write(false)]
         public DateTime CreateDate { get; }
+        
+        [Write(false)]
         public DateTime LastUpdateDate { get; }
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
         public int AuthorId { get; set; }
+
+        [Write(false)]
+        public Category Category { get; set; }
+
+        [Write(false)]
         public User Author { get; set; }
     }
 }

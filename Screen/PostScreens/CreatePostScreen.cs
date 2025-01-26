@@ -28,6 +28,8 @@ namespace GBE.Screen.PostScreens
                 Summary = sumario,
                 Slug = slug
             });
+
+            
             
             Console.ReadKey();
             MenuPostScreen.Load();
