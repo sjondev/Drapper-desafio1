@@ -20,20 +20,29 @@ namespace GBE.Screen.UserScreens
 
             Console.Write("Digite: "); var value = int.Parse(Console.ReadLine()!);
             if (value == 1) {
+                Console.Clear();
+                Console.ReadKey();
                 ListUsers();
                 Console.Write("Digite 1 para voltar: "); var back = int.Parse(Console.ReadLine()!);
                 if(back == 1) {
+                    Console.Clear();
+                    Console.ReadKey();
                     Load();
                 } else {
+                    Console.Clear();
                     Console.ReadKey();
                     MenuUserScreen.Load();
                 }
             } else if (value == 2) {
+                Console.Clear();
                 ListUserWithRole();
                 Console.Write("Digite 1 para voltar: "); var back = int.Parse(Console.ReadLine()!);
                 if(back == 1) {
+                    Console.Clear();
+                    Console.ReadKey();
                     Load();
                 } else {
+                    Console.Clear();
                     Console.ReadKey();
                     MenuUserScreen.Load();
                 }
@@ -41,8 +50,11 @@ namespace GBE.Screen.UserScreens
                 ListUserWithPost();
                 Console.Write("Digite 1 para voltar: "); var back = int.Parse(Console.ReadLine()!);
                 if(back == 1) {
+                    Console.Clear();
+                    Console.ReadKey();
                     Load();
                 } else {
+                    Console.Clear();
                     Console.ReadKey();
                     MenuUserScreen.Load();
                 }
