@@ -9,7 +9,7 @@ namespace GBE.Screen.UserScreens
         public static void Load() 
         {
             Console.Clear();
-            Console.WriteLine("Criar Novo Usuário");
+            Console.WriteLine("Autualizar Novo Usuário");
             Console.WriteLine("------------------------");
             Console.Write("Id: "); var id = Console.ReadLine();
             Console.Write("Nome: "); var name = Console.ReadLine();
