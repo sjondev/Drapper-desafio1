@@ -16,9 +16,7 @@ namespace GBE
         {
             Db.Connection = new SqlConnection(CONNECTION_STRING);
             Db.Connection.Open();
-
             Load();
-
             Db.Connection.Close();
         }
 
