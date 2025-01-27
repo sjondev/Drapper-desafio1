@@ -23,7 +23,7 @@ namespace GBE
         }
 
         private static void Load() {
-            //Console.Clear();
+            Console.Clear();
             Console.WriteLine("Meu Gerenciador");
             Console.WriteLine("----------------------");
             Console.WriteLine();
