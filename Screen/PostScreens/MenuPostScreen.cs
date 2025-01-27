@@ -6,7 +6,7 @@ namespace GBE.Screen.PostScreens
     {
         public static void Load() 
         {
-            // Console.Clear();
+            Console.Clear();
             Console.WriteLine("Gestão de posts");
             Console.WriteLine("--------------");
             Console.WriteLine("O que deseja fazer?");
