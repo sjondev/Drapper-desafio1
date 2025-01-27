@@ -49,7 +49,7 @@ namespace GBE
                     MenuTagScreen.Load();
                     break;
                 
-                case 5:
+                case 1:
                     Console.Clear();
                     MenuUserScreen.Load();
                     break;
