@@ -3,6 +3,7 @@ using GBE.Screen.CategoryScreens;
 using GBE.Screen.PostScreens;
 using GBE.Screen.RoleScreens;
 using GBE.Screen.TagScreens;
+using GBE.Screen.UserScreens;
 using Microsoft.Data.SqlClient;
 
 namespace GBE
@@ -48,8 +49,13 @@ namespace GBE
                     MenuTagScreen.Load();
                     break;
                 
+                case 5:
+                    Console.Clear();
+                    MenuUserScreen.Load();
+                    break;
+
                 case 6:
-                    // Console.Clear();
+                    Console.Clear();
                     MenuPostScreen.Load();
                     break;
 

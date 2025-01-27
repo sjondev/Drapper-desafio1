@@ -4,7 +4,7 @@ namespace GBE.Screen.UserScreens
     {
         public static void Load() 
         {
-            
+            ListUserScreen.Load();
         }
     }
 }

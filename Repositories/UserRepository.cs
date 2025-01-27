@@ -52,49 +52,31 @@ namespace GBE.Repositories
         {
             var query = @"
                 SELECT TOP (100) 
-                    [u].[Id] AS [UserId],
-                    [u].[Name],
-                    [u].[Email],
-                    [u].[PasswordHash],
-                    [u].[Bio],
-                    [u].[Image],
-                    [u].[Slug],
-                    [p].[Id] AS [PostId],
-                    [p].[Title] AS [PostTitle],
-                    [p].[Summary] AS [PostSummary],
-                    [p].[Body] AS [PostBody],
-                    [p].[Slug] AS [PostSlug]
-                FROM 
-                    [User] u
-                LEFT JOIN 
-                    [Post] p ON [p].[AuthorId] = [u].[Id];
+                [u].[Id] AS [UserId],
+                [u].[Name],
+                [u].[Email],
+                [u].[PasswordHash],
+                [u].[Bio],
+                [u].[Image],
+                [u].[Slug],
+                [p].[Id] AS [PostId],
+                [p].[Title],
+                [p].[Summary],
+                [p].[Body],
+                [p].[Slug]
+            FROM 
+                [User] AS [u]
+            LEFT JOIN 
+                [Post] AS [p] ON [p].[AuthorId] = [u].[Id];
             ";
 
             var users = new List<User>();
-            
-            var items = _connection.Query<User, Post, User>(
-                query,
-                (user, post) =>
-                {
-                    var usr = users.FirstOrDefault(x => x.Id == user.Id);
-                    if (usr == null)
-                    {
-                        usr = user;
-                        usr.Posts = new List<Post>();
-                        if (post != null)
-                            usr.Posts.Add(post);
-
-                        users.Add(usr);
-                    }
-                    else
-                    {
-                        if (post != null)
-                            usr.Posts.Add(post);
-                    }
-
-                    return user;
-                },
-                splitOn: "PostId");
+            var items = _connection.Query<User, Post, User>(query, 
+            (user, post) => {
+                user.Posts.Add(post);
+                users.Add(user);
+                return user;
+            }, splitOn: "PostId");
 
             return users;
         }
